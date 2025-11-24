@@ -6,8 +6,11 @@ from PIL import Image
 import plost
 import pickle
 
-# Load the trained model
-model = pickle.load('reservoir_model.pkl')
+# ... (your other imports)
+
+# Open the file in binary read mode
+with open('reservoir_model.pkl', 'rb') as file:
+    model = pickle.load(file)
 
 # --- UI CONFIGURATION ---
 st.set_page_config(page_title="Khadakwasla AI Predictor", page_icon="💧")
